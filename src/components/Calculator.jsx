@@ -25,25 +25,25 @@ const Calculator = () => {
       return;
     }
 
-    let calcResult;
+    let result;
     switch (operation) {
       case "+":
-        calcResult = n1 + n2;
+        result = n1 + n2;
         break;
       case "-":
-        calcResult = n1 - n2;
+        result = n1 - n2;
         break;
       case "*":
-        calcResult = n1 * n2;
+        result = n1 * n2;
         break;
       case "/":
-        calcResult = n1 / n2;
+        result = n1 / n2;
         break;
       default:
-        calcResult = null;
+        result = null;
     }
 
-    setResult(calcResult);
+    setResult(result);
   };
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Calculator = () => {
     <div className="max-w-md mx-auto mt-10 p-6 bg-blue-500 rounded-lg shadow-md">
       <h1 className="text-2xl font-semibold mb-6 text-center">Calculator App</h1>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit}>
         <div>
           <label className="block mb-1 font-medium">First number:</label>
           <input
@@ -82,8 +82,7 @@ const Calculator = () => {
           <select
             value={operation}
             onChange={(e) => setOperation(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-          >
+            className="w-full p-2 border border-gray-300 rounded-md">
             <option value="+">Add (+)</option>
             <option value="-">Subtract (−)</option>
             <option value="*">Multiply (×)</option>
@@ -93,8 +92,7 @@ const Calculator = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-2 px-4 rounded-md hover:bg-blue-700 transition"
-        >
+          className="w-full  mt-5 bg-blue-600 text-white p-2 px-4 rounded-md hover:bg-blue-700 transition">
           Calculate
         </button>
       </form>
