@@ -63,8 +63,7 @@ const Calculator = () => {
             type="text"
             value={num1}
             onChange={(e) => setNum1(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-          />
+            className="w-full p-2 border border-gray-300 rounded-md"/>
         </div>
 
         <div>
@@ -73,8 +72,7 @@ const Calculator = () => {
             type="text"
             value={num2}
             onChange={(e) => setNum2(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"
-          />
+            className="w-full p-2 border border-gray-300 rounded-md"/>
         </div>
 
         <div>
