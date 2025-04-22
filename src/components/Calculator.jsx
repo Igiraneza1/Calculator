@@ -74,13 +74,12 @@ const Calculator = () => {
             className="w-full p-2 border  rounded-md  font-semibold"/>
         </div>
 
-        <div>
-          <label className="block mb-1 font-medium">Operation</label>
+        <div className="m-5">
           <select
             value={operation}
             onChange={(e) => setOperation(e.target.value)}
             className="w-full p-2 rounded-md">
-            <option value="+">Add (+)</option>
+            <option value="+">Addition (+)</option>
             <option value="-">Subtract (−)</option>
             <option value="*">Multiply (×)</option>
             <option value="/">Divide (÷)</option>
@@ -89,7 +88,7 @@ const Calculator = () => {
 
         <button
           type="submit"
-          className="w-full  mt-5 bg-blue-400 text-white font-bold p-2 rounded-md hover:bg-blue-900">
+          className=" bg-blue-400 text-white font-bold p-2 rounded-md hover:bg-blue-900">
           Calculate
         </button>
       </form>
