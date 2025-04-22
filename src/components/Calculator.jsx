@@ -15,7 +15,7 @@ const Calculator = () => {
 
     if (isNaN(n1) || isNaN(n2)) {
       setResult(null);
-      setError("Please enter valid numbers.");
+      setError("Please enter integers.");
       return;
     }
 
@@ -53,26 +53,25 @@ const Calculator = () => {
   }, [result]);
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-blue-500 rounded-lg shadow-md">
-      <h1 className="text-2xl font-semibold mb-6 text-center">Calculator App</h1>
+    <div className="max-w-md mx-auto mt-10 p-6 bg-blue-500 rounded-xl">
+      <h1 className="text-3xl font-bold mb-6 text-center">Simple Calculator</h1>
 
       <form onSubmit={handleSubmit}>
-        <div>
-          <label className="block mb-1 font-medium">First number:</label>
+        <div className="m-5">
           <input
+          placeholder="First number"
             type="text"
             value={num1}
             onChange={(e) => setNum1(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"/>
+            className="w-full p-2 border rounded-md font-semibold"/>
         </div>
 
-        <div>
-          <label className="block mb-1 font-medium">Second number:</label>
-          <input
+        <div className="m-5">
+          <input placeholder="Second number"
             type="text"
             value={num2}
             onChange={(e) => setNum2(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md"/>
+            className="w-full p-2 border  rounded-md  font-semibold"/>
         </div>
 
         <div>
@@ -80,7 +79,7 @@ const Calculator = () => {
           <select
             value={operation}
             onChange={(e) => setOperation(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md">
+            className="w-full p-2 rounded-md">
             <option value="+">Add (+)</option>
             <option value="-">Subtract (−)</option>
             <option value="*">Multiply (×)</option>
@@ -90,7 +89,7 @@ const Calculator = () => {
 
         <button
           type="submit"
-          className="w-full  mt-5 bg-blue-600 text-white p-2 px-4 rounded-md hover:bg-blue-700 transition">
+          className="w-full  mt-5 bg-blue-400 text-white font-bold p-2 rounded-md hover:bg-blue-900">
           Calculate
         </button>
       </form>
@@ -99,7 +98,7 @@ const Calculator = () => {
 
       {result !== null && !error && (
         <div className="mt-6 text-center text-lg">
-          <span className="font-semibold">Result:</span> {result}
+          <span className="font-semibold">Answer:</span> {result}
         </div>
       )}
     </div>
