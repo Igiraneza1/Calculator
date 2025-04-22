@@ -15,13 +15,13 @@ const Calculator = () => {
 
     if (isNaN(n1) || isNaN(n2)) {
       setResult(null);
-      setError("Please enter integers.");
+      setError("Please enter number(s).");
       return;
     }
 
     if (operation === "/" && n2 === 0) {
       setResult(null);
-      setError("Cannot divide by zero");
+      setError("Infinit, Can't divide by zero");
       return;
     }
 
